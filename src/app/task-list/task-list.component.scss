@@ -1,0 +1,26 @@
+.task-table-container {
+    margin: 2vh auto; /* Vertical margin relative to the viewport height */
+    max-width: 90%; /* Container width relative to the viewport width */
+  }
+  
+  table {
+    width: 100%; /* Table width fills the container */
+    border-collapse: collapse; /* Makes the table look cleaner */
+  }
+  
+  th, td {
+    padding: 1em; /* Relative padding for better readability */
+    text-align: left; /* Align text in cells to the left */
+  }
+  
+  @media (max-width: 768px) {
+    .task-table-container {
+      margin: 5vh auto; /* Increased margin for smaller screens */
+      max-width: 95%; /* Slightly narrower container on small screens */
+    }
+  
+    th, td {
+      padding: 0.5em; /* Reduce padding on smaller screens */
+      font-size: 0.9rem; /* Smaller text for better fit */
+    }
+  }

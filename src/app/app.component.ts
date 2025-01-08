@@ -6,7 +6,7 @@ import { TaskListComponent } from './task-list/task-list.component';
   standalone: true,
   imports: [TaskListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'task_management_application';

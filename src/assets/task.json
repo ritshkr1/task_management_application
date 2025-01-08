@@ -1,17 +1,72 @@
 [
-    {
-      "id": 1,
-      "title": "Complete Angular Project",
-      "description": "Finish the task management system.",
-      "status": "in-progress",
-      "dueDate": "2025-01-10"
-    },
-    {
-      "id": 2,
-      "title": "Team Meeting",
-      "description": "Discuss the next sprint.",
-      "status": "pending",
-      "dueDate": "2025-01-08"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Complete Angular Project",
+    "description": "Finish the task management system.",
+    "status": "in-progress",
+    "dueDate": "2025-01-10"
+  },
+  {
+    "id": 2,
+    "title": "Team Meeting",
+    "description": "Discuss the next sprint.",
+    "status": "pending",
+    "dueDate": "2025-01-08"
+  },
+  {
+    "id": 3,
+    "title": "Code Review",
+    "description": "Review code for the login module.",
+    "status": "completed",
+    "dueDate": "2025-01-07"
+  },
+  {
+    "id": 4,
+    "title": "Write Documentation",
+    "description": "Prepare technical documentation for API integration.",
+    "status": "pending",
+    "dueDate": "2025-01-12"
+  },
+  {
+    "id": 5,
+    "title": "Client Presentation",
+    "description": "Present project updates to the client.",
+    "status": "in-progress",
+    "dueDate": "2025-01-15"
+  },
+  {
+    "id": 6,
+    "title": "Bug Fixing",
+    "description": "Resolve bugs reported by QA team.",
+    "status": "in-progress",
+    "dueDate": "2025-01-09"
+  },
+  {
+    "id": 7,
+    "title": "Design Landing Page",
+    "description": "Create a responsive design for the product landing page.",
+    "status": "pending",
+    "dueDate": "2025-01-14"
+  },
+  {
+    "id": 8,
+    "title": "Team Training Session",
+    "description": "Conduct a workshop on Angular best practices.",
+    "status": "completed",
+    "dueDate": "2025-01-05"
+  },
+  {
+    "id": 9,
+    "title": "Deploy Application",
+    "description": "Deploy the latest build to the production environment.",
+    "status": "in-progress",
+    "dueDate": "2025-01-11"
+  },
+  {
+    "id": 10,
+    "title": "Test Automation Scripts",
+    "description": "Write automation scripts for end-to-end testing.",
+    "status": "pending",
+    "dueDate": "2025-01-13"
+  }
+]

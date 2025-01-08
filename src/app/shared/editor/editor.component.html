@@ -1,1 +1,53 @@
-<p>editor works!</p>
+<div mat-dialog-title>
+    <div class="d-flex justify-content-between align-items-center position-relative">
+      <h2>{{ isEdit ? 'Edit Task' : 'Add Task' }}</h2>
+      <button mat-button class="position-absolute top-0 end-0 p-0 m-0" (click)="onCancel()">x</button>
+    </div>
+  </div>
+  
+  <mat-dialog-content>
+    <form [formGroup]="taskForm">
+      <!-- Bootstrap row for two-column layout -->
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" />
+          </mat-form-field>
+        </div>
+  
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+              <mat-option value="in-progress">In-Progress</mat-option>
+              <mat-option value="pending">Pending</mat-option>
+              <mat-option value="completed">Completed</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+        </div>
+  
+        <div class="col-md-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Due Date</mat-label>
+            <input matInput formControlName="dueDate" [matDatepicker]="picker" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end" class="m-2 p-2">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Save</button>
+  </mat-dialog-actions>
+  
