@@ -24,16 +24,25 @@
 
   </div>
   <div class="d-flex justify-content-end mb-1 rounded p-2">
+    <mat-radio-group [(ngModel)]="tableName" class="me-2">
+      <mat-radio-button value="Material">Material</mat-radio-button>
+      <mat-radio-button value="AgGrid">Ag-Grid</mat-radio-button>
+    </mat-radio-group>
     <input matInput type="text" placeholder="Search" class="border rounded w-auto" [(ngModel)]="filter"
       (input)="applyFilter()" />
   </div>
 
+  @if(tableName === 'AgGrid'){
   <ag-grid-angular style="height: 500px;" [theme]="theme" [rowData]="rowData" [columnDefs]="colDefs"
     [defaultColDef]="{ sortable: true, filter: true,flex:1 }" [pagination]="pagination"
-    [paginationPageSize]="paginationPageSize" class="ag-theme-alpine" [paginationPageSizeSelector]="paginationPageSizeSelector">
+    [paginationPageSize]="paginationPageSize" [paginationPageSizeSelector]="paginationPageSizeSelector"
+    >
   </ag-grid-angular>
+  }
 
-  <table mat-table matSort [dataSource]="filteredTasks" class="mat-elevation-z8" matSortActive="title"
+  @if(tableName === 'Material'){
+    <div>
+      <table mat-table matSort [dataSource]="filteredTasks" class="mat-elevation-z8" matSortActive="title"
     matSortStart="asc">
     <!-- Title Column -->
     <ng-container matColumnDef="title">
@@ -77,4 +86,7 @@
 
   <!-- Paginator -->
   <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+    </div>
+  
+}
 </div>
