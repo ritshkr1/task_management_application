@@ -3,14 +3,13 @@ import { ICellRendererParams } from 'ag-grid-community';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { MatButtonModule } from '@angular/material/button';
 @Component({
-  selector: 'app-ag-grid-cell',
-  standalone: true,
-  imports: [MatButtonModule],
-  template: `
+    selector: 'app-ag-grid-cell',
+    imports: [MatButtonModule],
+    template: `
 
 <button mat-raised-button color="primary" class="m-2 w-25" (click)="onEdit()">Edit</button>
 <button mat-raised-button color="warn" class="m-2 w-25" (click)="onDelete()">Delete</button>
-  `,
+  `
 })
 export class AgGrigCellComponent implements ICellRendererAngularComp {
   @Output() edit = new EventEmitter<any>();

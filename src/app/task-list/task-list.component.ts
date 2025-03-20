@@ -47,11 +47,10 @@ const myThemeDark = themeQuartz.withParams({
 });
 
 @Component({
-  selector: 'app-task-list',
-  standalone: true,
-  imports: [CommonModule, FormsModule, MatInputModule, MatTableModule, MatSortModule, MatButtonModule, MatPaginatorModule, MatDialogModule, MatSlideToggleModule, AgGridAngular,MatRadioModule],
-  templateUrl: './task-list.component.html',
-  styleUrl: './task-list.component.scss'
+    selector: 'app-task-list',
+    imports: [CommonModule, FormsModule, MatInputModule, MatTableModule, MatSortModule, MatButtonModule, MatPaginatorModule, MatDialogModule, MatSlideToggleModule, AgGridAngular, MatRadioModule],
+    templateUrl: './task-list.component.html',
+    styleUrl: './task-list.component.scss'
 })
 export class TaskListComponent implements OnInit, AfterViewInit {
   isDarkTheme: boolean = false;

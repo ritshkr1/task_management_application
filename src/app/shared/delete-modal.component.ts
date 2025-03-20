@@ -7,14 +7,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @Component({
-  selector: 'app-delete-modal',
-  standalone: true,
-  imports: [MatDialogModule,MatButtonModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatSelectModule,
-      MatDatepickerModule],
-  template: `<div mat-dialog-title class="text-center">Delete Task</div>
+    selector: 'app-delete-modal',
+    imports: [MatDialogModule, MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatDatepickerModule],
+    template: `<div mat-dialog-title class="text-center">Delete Task</div>
   <mat-dialog-content>
     <div class="d-flex justify-content-center">
       <p>Are you sure you want to delete this task?</p>
@@ -24,7 +23,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     <button mat-button class="btn btn-secondary" (click)="onCancel()">Cancel</button>
     <button mat-raised-button color="warn" class="btn btn-danger" (click)="onDelete()">Delete</button>
   </mat-dialog-actions>
-  `,
+  `
 })
 export class DeleteModalComponent {
   constructor(public dialogRef: MatDialogRef<DeleteModalComponent>) { }

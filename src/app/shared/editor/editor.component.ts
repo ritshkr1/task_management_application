@@ -10,15 +10,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @Component({
-  selector: 'app-editor',
-  standalone: true,
-  imports: [ReactiveFormsModule ,MatDialogModule,MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDatepickerModule],
-  templateUrl: './editor.component.html',
-  styleUrl: './editor.component.scss'
+    selector: 'app-editor',
+    imports: [ReactiveFormsModule, MatDialogModule, MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatDatepickerModule],
+    templateUrl: './editor.component.html',
+    styleUrl: './editor.component.scss'
 })
 export class EditorComponent {
   taskForm: FormGroup;
